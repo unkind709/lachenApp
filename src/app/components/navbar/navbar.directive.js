@@ -50,7 +50,7 @@
         // === following js will activate the menu in left side bar based on url ====
         function initNavbarMenuActive($window) {
             angular.element(".navigation-menu a").each(function() {
-                if (this.href == $window.location.href) {
+                if (this.href == window.location.href) {
                     angular.element(this).parent().addClass("active"); // add active to li of the current link
                     angular.element(this).parent().parent().parent().addClass("active"); // add active class to an anchor
                     angular.element(this).parent().parent().parent().parent().parent().addClass("active"); // add active class to an anchor

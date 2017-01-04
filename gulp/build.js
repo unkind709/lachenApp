@@ -79,7 +79,7 @@ gulp.task('fonts', function() {
 
 gulp.task('fontawesome', function() {
     return gulp.src('bower_components/font-awesome/fonts/*.*')
-        .pipe(gulp.dest(paths.dist + '/bower_components/font-awesome/fonts/'));
+        .pipe(gulp.dest(conf.paths.dist + '/fonts/'));
 });
 
 gulp.task('other', function() {
