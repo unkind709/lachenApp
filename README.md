@@ -1,26 +1,26 @@
 # lachenApp
 
-### Install
+## Install
 
-##### Install required tools `gulp` and `bower`:
+### Install required tools `gulp` and `bower`:
 ```
 npm install -g gulp bower
 ```
 
-##### Install `node_modules`:
+#### Install `node_modules`:
 ```
 npm install
 ```
 
-##### Install `bower_components`:
+#### Install `bower_components`:
 ```
 bower install
 ```
 
 
-### Run
+## Run
 
-##### Run `gulp`:
+### Run `gulp`:
 ```
 gulp serve
 ```
