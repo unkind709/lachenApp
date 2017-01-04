@@ -2,7 +2,25 @@
 
 ### Install
 
-##### Install required tools `yo`, `gulp` and `bower`:
+##### Install required tools `gulp` and `bower`:
 ```
-npm install -g yo gulp bower
+npm install -g gulp bower
+```
+
+##### Install `node_modules`:
+```
+npm install
+```
+
+##### Install `bower_components`:
+```
+bower install
+```
+
+
+### Run
+
+##### Run `gulp`:
+```
+gulp serve
 ```
