@@ -13,6 +13,12 @@
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
+      })
+      .state('detail', {
+        url: '/detail/:urldetail',
+        templateUrl: 'app/components/detail/detail.html',
+        controller: 'DetailController',
+        controllerAs: 'detail'
       });
 
     $urlRouterProvider.otherwise('/');

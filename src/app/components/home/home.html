@@ -14,10 +14,10 @@
             <div class="col-lg-4" ng-repeat="article in home.articles">
                 <div class="panel panel-color panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">{{article.title}}</h3>
+                        <h3 class="panel-title" ui-sref="detail"><a href>{{article.header}}</a></h3>
                     </div>
-                    <div class="panel-body">
-                        <p>{{article.body}}</p>
+                    <div class="panel-body" style="word-wrap: break-word; min-height: 150px; max-height: 150px;">
+                        <p ng-bind-html="article.title"></p>
                     </div>
                     <div class="panel-footer">
                         <span class="label label-danger" ng-show="article.angularjs">AngularJS</span>
@@ -35,7 +35,7 @@
         </div>
 
 
-        <div class="row">
+        <!--<div class="row">
             <div class="col-lg-12">
                 <div class="card-box">
                     <h4 class="text-dark  header-title m-t-0">Default Buttons</h4>
@@ -52,10 +52,10 @@
                     <button type="button" class="btn btn-pink waves-effect w-md waves-light m-b-5">Pink</button>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- end row -->
 
-        <div class="row">
+        <!--<div class="row">
             <div class="col-lg-12">
                 <div class="card-box">
                     <h4 class="text-dark  header-title m-t-0">Button-Rounded</h4>
@@ -73,9 +73,9 @@
 
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- end row -->
-        <div class="jumbotron text-center">
+        <!--<div class="jumbotron text-center">
             <h1>'Allo, 'Allo!</h1>
             <p class="lead">
                 <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br> Always a pleasure scaffolding your apps.
@@ -83,9 +83,9 @@
             <p class="animated infinite" ng-class="main.classAnimation">
                 <button type="button" class="btn btn-lg btn-success" ng-click="main.showToastr()">Splendid Toastr</button>
             </p>
-        </div>
+        </div>-->
 
-        <div class="row">
+        <!--<div class="row">
             <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
                 <div class="thumbnail">
                     <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
@@ -96,13 +96,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- Footer -->
         <footer class="footer text-right">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        2016 © Minton.
+                        2017 © Lachen Dev.
                     </div>
                 </div>
             </div>
