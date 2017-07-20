@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('lachenApp')
+    .module('testApp')
     .config(routerConfig);
 
   /** @ngInject */
@@ -14,14 +14,20 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
-      .state('detail', {
-        url: '/detail/:urldetail',
-        templateUrl: 'app/components/detail/detail.html',
-        controller: 'DetailController',
-        controllerAs: 'detail'
+      .state('login', {
+        url: '/login',
+        templateUrl: 'app/components/login/login.html',
+        controller: 'LoginController',
+        controllerAs: 'login'
+      })
+      .state('register', {
+        url: '/register',
+        templateUrl: 'app/components/register/register.html',
+        controller: 'RegisterController',
+        controllerAs: 'regis'
       });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/login');
   }
 
 })();

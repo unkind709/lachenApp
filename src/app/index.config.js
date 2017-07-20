@@ -1,8 +1,8 @@
-(function() {
+(function () {
   'use strict';
 
   angular
-    .module('lachenApp')
+    .module('testApp')
     .config(config);
 
   /** @ngInject */

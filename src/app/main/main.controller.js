@@ -1,23 +1,19 @@
-(function() {
+(function () {
     'use strict';
 
     angular
-        .module('lachenApp')
+        .module('testApp')
         .controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController($timeout, toastr) {
+    function MainController($log, $scope) {
         var vm = this;
 
-        vm.awesomeThings = [];
-        vm.classAnimation = '';
-        vm.creationDate = 1481776028474;
-        vm.showToastr = showToastr;
+        vm.endTime = new Date("July 20, 2017 15:00:00");
+        $scope.timerRunning = true;
+        
+        vm.pdfUrl = 'assets/pdf/dota2.pdf';
 
-        function showToastr() {
-            toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-            toastr.success('Have fun storming the castle!', 'Miracle Max Says');
-            vm.classAnimation = '';
-        }
+
     }
 })();

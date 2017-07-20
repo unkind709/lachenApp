@@ -2,32 +2,31 @@
     'use strict';
 
     angular
-        .module('lachenApp')
-        .directive('lachenNavbar', lachenNavbar);
+        .module('testApp')
+        .directive('testNavbar', testNavbar);
 
     /** @ngInject */
-    function lachenNavbar() {
+    function testNavbar() {
         var directive = {
             restrict: 'E',
             templateUrl: 'app/components/navbar/navbar.html',
-            scope: {
-                creationDate: '='
-            },
+            // scope: {
+            //     creationDate: '='
+            // },
             controller: NavbarController,
-            controllerAs: 'vm',
+            controllerAs: 'navbar',
             bindToController: true
         };
 
         return directive;
 
         /** @ngInject */
-        function NavbarController(moment) {
+        function NavbarController(moment, $scope) {
             initNavbar();
             initNavbarMenuActive();
             var vm = this;
 
             // "vm.creationDate" is available by directive option "bindToController: true"
-            vm.relativeDate = moment(vm.creationDate).fromNow();
         }
 
         function initNavbar() {

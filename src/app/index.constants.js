@@ -1,10 +1,7 @@
-/* global malarkey:false, moment:false */
-(function() {
+(function () {
     'use strict';
 
     angular
-        .module('lachenApp')
-        .constant('malarkey', malarkey)
+        .module('testApp')
         .constant('moment', moment);
-
 })();

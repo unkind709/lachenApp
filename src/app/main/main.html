@@ -1,2 +1,135 @@
-<lachen-navbar creation-date="main.creationDate"></lachen-navbar>
-<lachen-home></lachen-home>
+<div class="wrapper">
+    <div class="container">
+
+        <!-- Page-Title -->
+        <!-- <div class="row">
+            <div class="col-sm-12">
+                <h4 class="page-title">PAT 1</h4>
+            </div>
+        </div> -->
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-sm-offset-7 col-sm-3">
+                <h4>
+                    เหลือเวลาทำข้อสอบ&nbsp;&nbsp; 
+                    <timer end-time="main.endTime"> {{hours | twopos}} : {{minutes | twopos}} : {{seconds | twopos}}</timer>
+                </h4>
+                
+            </div>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-inverse btn-rounded w-md waves-effect waves-light m-b-5">ส่งกระดาษคำตอบ</button>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="panel panel-color panel-primary">
+                    <div class="panel-body">
+                        <!-- <pdf-viewer delegate-handle="my-pdf-container" url="main.pdfUrl" scale="1.2" show-toolbar="false" overflow-scroll="true"></pdf-viewer> -->
+                        <!-- <pdf-object file="http://www.polyu.edu.hk/iaee/files/pdf-sample.pdf"></pdf-object> -->
+                        <div ng-pdf-object url="assets/pdf/dota2.pdf#toolbar=0&navpanes=0" height="800"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4">
+                <div class="card-box" style="height: 500px; overflow:scroll;">
+                    <h4 class="text-dark  header-title m-t-0">PAT 1 - Answer sheet</h4>
+                    <div class="row">
+                        <div class="col-sm-12" ng-repeat="n in [] | range:100">
+                            <label style="padding-right: 17px;" ng-if="$index+1 < 10">{{$index+1}}</label>
+                            <label style="padding-right: 10px;" ng-if="$index+1 >= 10 && $index+1 < 100">{{$index+1}}</label>
+                            <label style="padding-right: 3px;" ng-if="$index+1 >= 100">{{$index+1}}</label>
+                            <div class="radio radio-success radio-inline">
+                                <input type="radio" id="radio1_{{$index}}" value="1" name="no.{{$index}}">
+                                <label for="radio1_{{$index}}">1</label>
+                            </div>
+                            <div class="radio radio-success radio-inline">
+                                <input type="radio" id="radio2_{{$index}}" value="2" name="no.{{$index}}">
+                                <label for="radio2_{{$index}}">2</label>
+                            </div>
+                            <div class="radio radio-success radio-inline">
+                                <input type="radio" id="radio3_{{$index}}" value="3" name="no.{{$index}}">
+                                <label for="radio3_{{$index}}">3</label>
+                            </div>
+                            <div class="radio radio-success radio-inline">
+                                <input type="radio" id="radio4_{{$index}}" value="4" name="no.{{$index}}">
+                                <label for="radio4_{{$index}}">4</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+        <!-- <div class="row">
+            <div class="col-sm-12">
+                <ul uib-pagination total-items="home.totalRecord" ng-model="home.currentPage" max-size="5" items-per-page="home.pageSize" class="pagination position-right" boundary-link-numbers="true" rotate="false" previous-text="&lsaquo;" next-text="&rsaquo;" ng-change="home.changePage()"></ul>
+            </div>
+        </div> -->
+
+
+        <!--<div class="row">
+            <div class="col-lg-12">
+                <div class="card-box">
+                    <h4 class="text-dark  header-title m-t-0">Default Buttons</h4>
+                    <p class="text-muted m-b-25 font-13">Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+
+                    <button type="button" class="btn btn-default waves-effect w-md m-b-5">Default</button>
+                    <button type="button" class="btn btn-primary waves-effect w-md waves-light m-b-5">Primary</button>
+                    <button type="button" class="btn btn-success waves-effect w-md waves-light m-b-5">Success</button>
+                    <button type="button" class="btn btn-info waves-effect w-md waves-light m-b-5">Info</button>
+                    <button type="button" class="btn btn-warning waves-effect w-md waves-light m-b-5">Warning</button>
+                    <button type="button" class="btn btn-danger waves-effect w-md waves-light m-b-5">Danger</button>
+                    <button type="button" class="btn btn-inverse waves-effect w-md waves-light m-b-5">Inverse</button>
+                    <button type="button" class="btn btn-purple waves-effect w-md waves-light m-b-5">Purple</button>
+                    <button type="button" class="btn btn-pink waves-effect w-md waves-light m-b-5">Pink</button>
+                </div>
+            </div>
+        </div>-->
+        <!-- end row -->
+
+        <!--<div class="row">
+            <div class="col-lg-12">
+                <div class="card-box">
+                    <h4 class="text-dark  header-title m-t-0">Button-Rounded</h4>
+                    <p class="text-muted m-b-25 font-13">Add <code>.btn-rounded</code> to default button to get rounded corners.</p>
+
+                    <button type="button" class="btn btn-default btn-rounded w-md waves-effect waves-circle m-b-5">Default</button>
+                    <button type="button" class="btn btn-primary btn-rounded w-md waves-effect waves-light m-b-5">Primary</button>
+                    <button type="button" class="btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">Success</button>
+                    <button type="button" class="btn btn-info btn-rounded w-md waves-effect waves-light m-b-5">Info</button>
+                    <button type="button" class="btn btn-warning btn-rounded w-md waves-effect waves-light m-b-5">Warning</button>
+                    <button type="button" class="btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5">Danger</button>
+                    <button type="button" class="btn btn-inverse btn-rounded w-md waves-effect waves-light m-b-5">Inverse</button>
+                    <button type="button" class="btn btn-purple btn-rounded w-md waves-effect waves-light m-b-5">Purple</button>
+                    <button type="button" class="btn btn-pink btn-rounded w-md waves-effect waves-light m-b-5">Pink</button>
+
+                </div>
+            </div>
+        </div>-->
+        <!-- end row -->
+        <!--<div class="jumbotron text-center">
+            <h1>'Allo, 'Allo!</h1>
+            <p class="lead">
+                <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br> Always a pleasure scaffolding your apps.
+            </p>
+            <p class="animated infinite" ng-class="main.classAnimation">
+                <button type="button" class="btn btn-lg btn-success" ng-click="main.showToastr()">Splendid Toastr</button>
+            </p>
+        </div>-->
+
+        <!--<div class="row">
+            <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
+                <div class="thumbnail">
+                    <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
+                    <div class="caption">
+                        <h3>{{ awesomeThing.title }}</h3>
+                        <p>{{ awesomeThing.description }}</p>
+                        <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</div>
